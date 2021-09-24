@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>ANKETA</title>
+  </head>
+  <body>
+    <div></div>
+ </body>
+ <script>
+     var userName;
+     var userSurnam
+     var patronymic;
+     var userAge;
+     var userSex;
+     var userAgeDays;
+     var in5years;
+     var aged;
+     var gender;
+
+     userName=prompt('Введите имя');
+     if(userName==""){
+        userName=prompt('Введите имя');
+     }
+
+     userSurname=prompt('Введите фамилию');
+     if(userSurname==""){
+        userSurname=prompt('Введите фамилию');
+     }
+
+     patronymic=prompt('Введите отчество ');
+     if(patronymic==""){
+        patronymic=prompt('Введите отчество');
+     }
+
+     userAge=Number(prompt('Введите ваш возраст в годах'));
+     if(userAge==""){
+        userAge=Number(prompt('Введите ваш возраст в годах'));
+     }
+     if(userAge>100 || userAge<0){
+        userAge=Number(prompt('Введите ваш возраст в годах'));
+     }
+
+     userSex=confirm('Вы мужчина?');
+     if(userSex==true){
+          gender='мужской';
+     } else gender='женский';
+
+     if(userSex==true && userAge>=63){
+         aged='да';
+     }
+     else if(userSex==false&&userAge>=58){
+         aged='да';
+     }
+     else aged='нет';
+
+userAgeDays=userAge*365;
+in5years=userAge+5;
+alert('Ваше ФИО: '+userSurname+' '+userName+' '+patronymic+'\nВаш возраст в годах: '+userAge+'\nВаш возраст в днях: '+userAgeDays+'\nЧерез 5 лет вам будет: '+in5years+'\nВаш пол: '+gender+'\nВы на пенсии: '+aged);
+ </script>
+</html>
